@@ -5,3 +5,11 @@ function validarCPF(cpf){
         return false;
     }
 }
+
+let soma = 0;
+let resto;
+
+// Validação o 1° digito
+for(let i=1; i <= 9; i++){
+    soma += parseInt(cpf.substring(i-1, i)) * (11 - i);
+}
