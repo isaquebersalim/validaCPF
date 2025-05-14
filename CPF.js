@@ -23,3 +23,9 @@ if(resto === 10 || resto === 11){
 if(resto !== parseInt(cpf.substring(9,10))){
     return false;
 }
+
+// Validação do 2° digito
+soma = 0;
+for(let i=1; i <= 10; i++){
+    soma += parseInt(cpf.substring(i-1, i)) * (12 - i);
+}
