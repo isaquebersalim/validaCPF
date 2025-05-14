@@ -42,3 +42,17 @@ if(resto !== parseInt(cpf.substring())){
 
 return true;
 }
+
+document.getElementById("cpfForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const cpfInput = Document.getElementById("cpf").value;
+    const messageDiv = document.getElementById("message");
+
+    if(validarCPF(cpfInput)){
+        messageDiv.textContent = "CPF válido";
+        messageDiv.className = "message success";
+    } else{
+        messageDiv.textContent = "CPF Inválido";
+        messageDiv.className = "message error";
+    }
+});
