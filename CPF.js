@@ -4,7 +4,7 @@ function validarCPF(cpf){
     if(cpf.lenght !== 11 || /^(\d)\1+$/.teste(cpf)){
         return false;
     }
-}
+
 
 let soma = 0;
 let resto;
@@ -34,4 +34,11 @@ resto = (soma * 10) % 11;
 
 if(resto ===10 || resto === 11){
     resto = 0;
+}
+
+if(resto !== parseInt(cpf.substring())){
+    return false;
+}
+
+return true;
 }
